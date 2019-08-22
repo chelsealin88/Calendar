@@ -24,6 +24,7 @@ class CalendarViewController: UIViewController {
         return range?.count ?? 0
     }
     
+    //算出每個月的第一天是星期幾，週日:1 週一：2 ... etc
     var today : Int {
         let dateComponents = DateComponents(year: currentYear, month: currentMonth)
         let date = Calendar.current.date(from: dateComponents)!
@@ -40,8 +41,6 @@ class CalendarViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         settingUI()
-        print(currentYear)
-        print(currentMonth)
     }
     
     override func viewWillLayoutSubviews() {
@@ -71,13 +70,12 @@ class CalendarViewController: UIViewController {
     func settingUI() {
         monthLabel.text = "\(currentMonth)月\(currentYear)"
         collectionView.reloadData()
-        print(today)
     }
 
 
 }
 
-extension CalendarViewController : UICollectionViewDataSource, UICollectionViewDelegate {
+extension CalendarViewController : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -91,9 +89,24 @@ extension CalendarViewController : UICollectionViewDataSource, UICollectionViewD
         } else {
             cell.dayLabel.text = "\(indexPath.row + 1 - emptyDay)"
         }
+        cell.updateCell()
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cellSize = (UIScreen.main.bounds.width / 7 )
+        return CGSize(width: cellSize, height: cellSize)
+     
+    }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+   
     
 }
