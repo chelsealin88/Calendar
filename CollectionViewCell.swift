@@ -10,31 +10,29 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var weekDays = [WeekDay]()
-    
     @IBOutlet weak var collectionView: UICollectionView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        collectionView.dataSource = self
-        collectionView.delegate = self
         
+        collectionView.delegate = self
+        collectionView.dataSource = self
+
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-         return 1
-    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return weekDays.count
+        return 31
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weekdayCell", for: indexPath) as! weekDayCellCollectionViewCell
-        let weekDay = weekDays[indexPath.row]
-        cell.updateCell(weekDay)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dayCell", for: indexPath) as! dayCellCollectionViewCell
+        cell.dayLabel.text = "\(indexPath.row + 1)"
         return cell
     }
+    
     
     
 }

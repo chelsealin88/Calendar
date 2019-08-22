@@ -12,6 +12,9 @@ import UIKit
 class CalendarCollectionViewController: UICollectionViewController {
     
     var weekdays = [WeekDay]()
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    var currentYear = Calendar.current.component(.year, from: Date())
+    var currentMouth = Calendar.current.component(.month, from: Date())
     
     enum Section: Int {
         case month = 0
@@ -23,6 +26,7 @@ class CalendarCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         registerNib(nibname: "monthCell")
+        registerNib(nibname: "weekCell")
         registerNib(nibname: "dayCell")
         
         weekdays = WeekDay.getWeek()
@@ -49,25 +53,18 @@ class CalendarCollectionViewController: UICollectionViewController {
             let monthCell = collectionView.dequeueReusableCell(withReuseIdentifier: "monthCell", for: indexPath) as! monthCellCollectionViewCell
             return monthCell
         case Section.weekDay.rawValue:
-            let weekDayCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-            weekDayCell.weekDays = self.weekdays
+            let weekDayCell = collectionView.dequeueReusableCell(withReuseIdentifier: "weekCell", for: indexPath) as! weekDayCellCollectionViewCell
             return weekDayCell
         default:
-            let dayCell = collectionView.dequeueReusableCell(withReuseIdentifier: "dayCell", for: indexPath) as! dayCellCollectionViewCell
+            let dayCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
             return dayCell
         }
     
     
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        if indexPath.section == 1 {
-//            return CGSize(width: collectionView.bounds.width, height: 10.0)
-//        }
-//
-//        return CGSize(width: collectionView.bounds.width, height: 10.0)
-//    }
+    
+    
     // MARK: UICollectionViewDelegate
 
     /*
@@ -107,8 +104,28 @@ class CalendarCollectionViewController: UICollectionViewController {
 
 }
 
-extension UICollectionViewDelegateFlowLayout {
+extension CalendarCollectionViewController : UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        switch (indexPath.section) {
+        case 0:
+            return CGSize(width: collectionView.bounds.width, height: 60)
+        case 1:
+            return CGSize(width: collectionView.bounds.width, height: 50)
+        default:
+            return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height)
+        }
+       
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
     
 }
 

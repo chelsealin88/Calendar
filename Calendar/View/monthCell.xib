@@ -20,8 +20,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SI-v0-hNX">
-                        <rect key="frame" x="20" y="25" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                        <rect key="frame" x="20" y="25" width="30" height="30"/>
+                        <state key="normal" title="&lt;">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z20-vb-KUy">
                         <rect key="frame" x="186" y="30" width="42" height="20.5"/>
@@ -30,8 +32,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyo-tA-BV2">
-                        <rect key="frame" x="343" y="25" width="46" height="30"/>
-                        <state key="normal" title="Button"/>
+                        <rect key="frame" x="359" y="25" width="30" height="30"/>
+                        <state key="normal" title="&gt;">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
                     </button>
                 </subviews>
             </view>
