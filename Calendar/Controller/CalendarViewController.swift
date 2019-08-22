@@ -17,7 +17,22 @@ class CalendarViewController: UIViewController {
     var currentYear = Calendar.current.component(.year, from: Date())
     var currentMonth = Calendar.current.component(.month, from: Date())
 
-  
+    var numberOfDaysInThisMonth : Int {
+        let dateComponents = DateComponents(year: currentYear, month: currentMonth)
+        let date = Calendar.current.date(from: dateComponents)!
+        let range = Calendar.current.range(of: .day, in: .month, for: date)
+        return range?.count ?? 0
+    }
+    
+    var today : Int {
+        let dateComponents = DateComponents(year: currentYear, month: currentMonth)
+        let date = Calendar.current.date(from: dateComponents)!
+        return Calendar.current.component(.weekday, from: date)
+    }
+    
+    var emptyDay : Int {
+        return today - 1
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +42,12 @@ class CalendarViewController: UIViewController {
         settingUI()
         print(currentYear)
         print(currentMonth)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        collectionView.collectionViewLayout.invalidateLayout()
+        collectionView.reloadData()
     }
     
     @IBAction func previousBtn(_ sender: Any) {
@@ -49,17 +70,10 @@ class CalendarViewController: UIViewController {
     
     func settingUI() {
         monthLabel.text = "\(currentMonth)月\(currentYear)"
+        collectionView.reloadData()
+        print(today)
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -67,12 +81,16 @@ extension CalendarViewController : UICollectionViewDataSource, UICollectionViewD
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 31
+        return numberOfDaysInThisMonth + emptyDay
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "dayCell", for: indexPath) as! dayCellCollectionViewCell
-        cell.dayLabel.text = "\(indexPath.row + 1)"
+        if indexPath.row < emptyDay {
+            cell.dayLabel.text = ""
+        } else {
+            cell.dayLabel.text = "\(indexPath.row + 1 - emptyDay)"
+        }
         return cell
     }
     
