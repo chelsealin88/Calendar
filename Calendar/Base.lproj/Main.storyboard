@@ -36,6 +36,9 @@
                                         <state key="normal" title="&gt;">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="nextBtn:" destination="Qwq-1o-AjG" eventType="touchUpInside" id="dX3-zD-weA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvP-jn-WnK">
                                         <rect key="frame" x="20" y="25" width="30" height="30"/>
@@ -46,6 +49,9 @@
                                         <state key="normal" title="&lt;">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="previousBtn:" destination="Qwq-1o-AjG" eventType="touchUpInside" id="ERV-4F-nh7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -173,6 +179,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="Ujz-gN-6zN" id="ceE-FA-reo"/>
+                        <outlet property="monthLabel" destination="d7n-Bz-SOM" id="Wqh-7f-3a2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AZU-xc-EME" userLabel="First Responder" sceneMemberID="firstResponder"/>

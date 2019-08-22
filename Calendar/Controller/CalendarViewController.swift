@@ -11,15 +11,46 @@ import UIKit
 class CalendarViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var monthLabel: UILabel!
+    
+    
+    var currentYear = Calendar.current.component(.year, from: Date())
+    var currentMonth = Calendar.current.component(.month, from: Date())
+
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         collectionView.delegate = self
         collectionView.dataSource = self
+        settingUI()
+        print(currentYear)
+        print(currentMonth)
     }
     
-
+    @IBAction func previousBtn(_ sender: Any) {
+        currentMonth -= 1
+        if currentMonth == 0 {
+            currentMonth = 12
+            currentYear -= 1
+        }
+        settingUI()
+    }
+    
+    @IBAction func nextBtn(_ sender: Any) {
+       currentMonth += 1
+        if currentMonth == 13 {
+            currentMonth = 1
+            currentYear += 1
+        }
+        settingUI()
+    }
+    
+    func settingUI() {
+        monthLabel.text = "\(currentMonth)月\(currentYear)"
+    }
+    
     /*
     // MARK: - Navigation
 
