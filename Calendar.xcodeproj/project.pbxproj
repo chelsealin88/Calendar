@@ -8,38 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		5E5CE5E7230E2F9900BFA64B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CE5E6230E2F9900BFA64B /* AppDelegate.swift */; };
-		5E5CE5E9230E2F9900BFA64B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CE5E8230E2F9900BFA64B /* ViewController.swift */; };
 		5E5CE5EC230E2F9900BFA64B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5CE5EA230E2F9900BFA64B /* Main.storyboard */; };
 		5E5CE5EF230E2F9900BFA64B /* Calendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CE5ED230E2F9900BFA64B /* Calendar.xcdatamodeld */; };
 		5E5CE5F1230E2F9900BFA64B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E5CE5F0230E2F9900BFA64B /* Assets.xcassets */; };
 		5E5CE5F4230E2F9900BFA64B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5CE5F2230E2F9900BFA64B /* LaunchScreen.storyboard */; };
-		5E5CE5FC230E335000BFA64B /* monthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E5CE5FB230E335000BFA64B /* monthCell.xib */; };
-		5E5CE603230E35CB00BFA64B /* CalendarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CE602230E35CB00BFA64B /* CalendarCollectionViewController.swift */; };
 		5E5CE607230E379000BFA64B /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CE606230E379000BFA64B /* Calendar.swift */; };
-		5E5CE609230E397600BFA64B /* monthCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CE608230E397600BFA64B /* monthCellCollectionViewCell.swift */; };
-		5E5CE60B230E398100BFA64B /* weekDayCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CE60A230E398100BFA64B /* weekDayCellCollectionViewCell.swift */; };
 		5E5CE60D230E398A00BFA64B /* dayCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5CE60C230E398A00BFA64B /* dayCellCollectionViewCell.swift */; };
-		5EF53C5E230E4C1100D894BE /* weekCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF53C5D230E4C1100D894BE /* weekCell.xib */; };
-		5EF53C64230E62A600D894BE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF53C63230E62A600D894BE /* CollectionViewCell.swift */; };
+		5EF53C66230E71D300D894BE /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF53C65230E71D300D894BE /* CalendarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E5CE5E3230E2F9900BFA64B /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E5CE5E6230E2F9900BFA64B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E5CE5E8230E2F9900BFA64B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5E5CE5EB230E2F9900BFA64B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E5CE5EE230E2F9900BFA64B /* Calendar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Calendar.xcdatamodel; sourceTree = "<group>"; };
 		5E5CE5F0230E2F9900BFA64B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E5CE5F3230E2F9900BFA64B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E5CE5F5230E2F9900BFA64B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E5CE5FB230E335000BFA64B /* monthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = monthCell.xib; sourceTree = "<group>"; };
-		5E5CE602230E35CB00BFA64B /* CalendarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewController.swift; sourceTree = "<group>"; };
 		5E5CE606230E379000BFA64B /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
-		5E5CE608230E397600BFA64B /* monthCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = monthCellCollectionViewCell.swift; sourceTree = "<group>"; };
-		5E5CE60A230E398100BFA64B /* weekDayCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weekDayCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		5E5CE60C230E398A00BFA64B /* dayCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dayCellCollectionViewCell.swift; sourceTree = "<group>"; };
-		5EF53C5D230E4C1100D894BE /* weekCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = weekCell.xib; sourceTree = "<group>"; };
-		5EF53C63230E62A600D894BE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionViewCell.swift; path = ../../CollectionViewCell.swift; sourceTree = "<group>"; };
+		5EF53C65230E71D300D894BE /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				5E5CE5E6230E2F9900BFA64B /* AppDelegate.swift */,
-				5E5CE5E8230E2F9900BFA64B /* ViewController.swift */,
 				5E5CE5EA230E2F9900BFA64B /* Main.storyboard */,
 				5E5CE605230E35DC00BFA64B /* Model */,
 				5E5CE601230E347200BFA64B /* View */,
@@ -89,12 +76,7 @@
 		5E5CE601230E347200BFA64B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5E5CE608230E397600BFA64B /* monthCellCollectionViewCell.swift */,
-				5E5CE60A230E398100BFA64B /* weekDayCellCollectionViewCell.swift */,
 				5E5CE60C230E398A00BFA64B /* dayCellCollectionViewCell.swift */,
-				5EF53C63230E62A600D894BE /* CollectionViewCell.swift */,
-				5E5CE5FB230E335000BFA64B /* monthCell.xib */,
-				5EF53C5D230E4C1100D894BE /* weekCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,7 +84,7 @@
 		5E5CE604230E35CF00BFA64B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5E5CE602230E35CB00BFA64B /* CalendarCollectionViewController.swift */,
+				5EF53C65230E71D300D894BE /* CalendarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,10 +155,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E5CE5FC230E335000BFA64B /* monthCell.xib in Resources */,
 				5E5CE5F4230E2F9900BFA64B /* LaunchScreen.storyboard in Resources */,
 				5E5CE5F1230E2F9900BFA64B /* Assets.xcassets in Resources */,
-				5EF53C5E230E4C1100D894BE /* weekCell.xib in Resources */,
 				5E5CE5EC230E2F9900BFA64B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,13 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E5CE5E9230E2F9900BFA64B /* ViewController.swift in Sources */,
-				5E5CE60B230E398100BFA64B /* weekDayCellCollectionViewCell.swift in Sources */,
-				5EF53C64230E62A600D894BE /* CollectionViewCell.swift in Sources */,
+				5EF53C66230E71D300D894BE /* CalendarViewController.swift in Sources */,
 				5E5CE5EF230E2F9900BFA64B /* Calendar.xcdatamodeld in Sources */,
 				5E5CE607230E379000BFA64B /* Calendar.swift in Sources */,
-				5E5CE609230E397600BFA64B /* monthCellCollectionViewCell.swift in Sources */,
-				5E5CE603230E35CB00BFA64B /* CalendarCollectionViewController.swift in Sources */,
 				5E5CE5E7230E2F9900BFA64B /* AppDelegate.swift in Sources */,
 				5E5CE60D230E398A00BFA64B /* dayCellCollectionViewCell.swift in Sources */,
 			);

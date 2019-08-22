@@ -12,9 +12,5 @@ class dayCellCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var dayLabel: UILabel!
     
-    func updateCell() {
-
-        
-    }
-    
+   
 }

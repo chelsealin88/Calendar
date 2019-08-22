@@ -1,5 +1,5 @@
 //
-//  CollectionViewCell.swift
+//  CalendarViewController.swift
 //  Calendar
 //
 //  Created by Chelsea Lin on 2019/8/22.
@@ -8,19 +8,31 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+class CalendarViewController: UIViewController {
+
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
         collectionView.delegate = self
         collectionView.dataSource = self
-
     }
     
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
+
+extension CalendarViewController : UICollectionViewDataSource, UICollectionViewDelegate {
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
